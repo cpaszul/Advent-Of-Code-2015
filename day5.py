@@ -3,7 +3,7 @@ from itertools import combinations
 
 DEFAULT_INPUT = 'day5.txt'
 
-def day_5(loc: str = DEFAULT_INPUT) -> int:
+def day_5(loc: str = DEFAULT_INPUT) -> tuple[int, int]:
     with open(loc) as f:
         strings = [line.rstrip() for line in f.readlines()]
     return len([s for s in strings if nice_p1(s)]), \
